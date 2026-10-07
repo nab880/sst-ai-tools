@@ -1,0 +1,12 @@
+WARNING: Building component "probe" with no links assigned.
+PARAM direct=2GHz scoped=1GHz expected=2GHz,2GHz
+DISCRETE u=0.1 index=1 expected=0
+DISCRETE u=0.5 index=2 expected=1
+DISCRETE u=0.99 index=2 expected=1
+WRITE_UNLOCK request=0 response=0 expected=8000,8000
+ACCUM max=2.2250738585072014e-308 variance=4 expected=-1,1
+ probe.batch : Histogram : BinsMinValue.u64 = 0; BinsMaxValue.u64 = 19; BinWidth.u32 = 10; TotalNumBins.u32 = 2; Sum.u64 = 300; SumSQ.u64 = 900; NumActiveBins.u32 = 1; NumItemsCollected.u64 = 100; NumItemsBinned.u64 = 1; NumOutOfBounds-MinValue.u64 = 0; NumOutOfBounds-MaxValue.u64 = 0; Bin0:0-9.u64 = 100; Bin1:10-19.u64 = 0; 
+ probe.offset : Histogram : BinsMinValue.u64 = 5; BinsMaxValue.u64 = 24; BinWidth.u32 = 10; TotalNumBins.u32 = 2; Sum.u64 = 19; SumSQ.u64 = 221; NumActiveBins.u32 = 2; NumItemsCollected.u64 = 2; NumItemsBinned.u64 = 2; NumOutOfBounds-MinValue.u64 = 0; NumOutOfBounds-MaxValue.u64 = 0; Bin0:5-14.u64 = 0; Bin1:15-24.u64 = 0; 
+ probe.floating : Histogram : BinsMinValue.f64 = 0.000000; BinsMaxValue.f64 = 1.000000; BinWidth.u32 = 1; TotalNumBins.u32 = 2; Sum.f64 = 0.000000; SumSQ.f64 = 0.000000; NumActiveBins.u32 = 0; NumItemsCollected.u64 = 1; NumItemsBinned.u64 = 0; NumOutOfBounds-MinValue.u64 = 0; NumOutOfBounds-MaxValue.u64 = 1; Bin0:0-0.u64 = 0; Bin1:1-1.u64 = 0; 
+ probe.accum : Accumulator : Sum.f64 = -4.000000; SumSQ.f64 = 10.000000; Count.u64 = 2; Min.f64 = -3.000000; Max.f64 = 0.000000; 
+Simulation is complete, simulated time: 5 ns

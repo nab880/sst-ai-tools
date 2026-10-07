@@ -1,0 +1,582 @@
+{
+  "review_date": "2026-09-25",
+  "reviewed_revisions": {
+    "sst-core": "f54d79af27c8756b50dbb9e8eb356eb5dcbee4d9",
+    "sst-elements": "9a3de5e2e9ea343b49bb09ffc18bccc2b61c5ba1"
+  },
+  "current_devel_revisions": {
+    "sst-core": "09bc3927b1fc23e65f3aa0795739cad36f315d5a",
+    "sst-elements": "47b99537882df309fa2bdb2eb60c9a1e16efb5e5"
+  },
+  "status_convention": "reproduced means the targeted historical defect was reproduced on current_devel_retest.revisions; do not assume that status applies to a different revision. Close only with a verified fix and focused regression evidence.",
+  "findings": [
+    {
+      "id": "F01",
+      "historical_priority": "P1",
+      "feature": "Clock activation during a callback",
+      "historical_observation": "Newly activated handler fires early; vector growth crashes the simulation",
+      "status": "reproduced",
+      "current_devel_retest": {
+        "at": "2026-10-07T03:13:55.910266+00:00",
+        "revisions": {
+          "sst-core": "09bc3927b1fc23e65f3aa0795739cad36f315d5a",
+          "sst-elements": "47b99537882df309fa2bdb2eb60c9a1e16efb5e5"
+        },
+        "report": "../2026-10-06/index.md",
+        "assessment": "../2026-10-06/evidence/assessment.json",
+        "status": "reproduced",
+        "observed": {
+          "promised_cycle": 2,
+          "observed_cycle": 1,
+          "growth_exit_code": -11
+        },
+        "expected": {
+          "reactivated_cycle": 2,
+          "growth_crash": false
+        },
+        "runs": [
+          "clock_one",
+          "clock"
+        ],
+        "commands": [
+          [
+            "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/install/bin/sst",
+            "--add-lib-path=/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/reassessment-2026-10-06",
+            "--stop-at=5ns",
+            "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/reviews/core/2026-10-06/probes/probe.py",
+            "--",
+            "clock_one"
+          ],
+          [
+            "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/install/bin/sst",
+            "--add-lib-path=/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/reassessment-2026-10-06",
+            "--stop-at=5ns",
+            "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/reviews/core/2026-10-06/probes/probe.py",
+            "--",
+            "clock"
+          ]
+        ]
+      },
+      "fix_revision": null,
+      "notes": "Reproduced on the recorded devel revisions; no repair applied. Scope/exposure limitations are retained in the current reassessment report."
+    },
+    {
+      "id": "F02",
+      "historical_priority": "P1",
+      "feature": "Shared/scoped parameters",
+      "historical_observation": "Scoped extraction replaces local overrides with shared defaults",
+      "status": "reproduced",
+      "current_devel_retest": {
+        "at": "2026-10-07T03:13:55.910266+00:00",
+        "revisions": {
+          "sst-core": "09bc3927b1fc23e65f3aa0795739cad36f315d5a",
+          "sst-elements": "47b99537882df309fa2bdb2eb60c9a1e16efb5e5"
+        },
+        "report": "../2026-10-06/index.md",
+        "assessment": "../2026-10-06/evidence/assessment.json",
+        "status": "reproduced",
+        "observed": {
+          "direct": "2GHz",
+          "scoped": "1GHz"
+        },
+        "expected": {
+          "direct": "2GHz",
+          "scoped": "2GHz"
+        },
+        "runs": [
+          "basic"
+        ],
+        "commands": [
+          [
+            "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/install/bin/sst",
+            "--add-lib-path=/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/reassessment-2026-10-06",
+            "--stop-at=5ns",
+            "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/reviews/core/2026-10-06/probes/probe.py",
+            "--",
+            "basic"
+          ]
+        ]
+      },
+      "fix_revision": null,
+      "notes": "Reproduced on the recorded devel revisions; no repair applied. Scope/exposure limitations are retained in the current reassessment report."
+    },
+    {
+      "id": "F03",
+      "historical_priority": "P1",
+      "feature": "Discrete distributions",
+      "historical_observation": "Returns an index outside the configured outcomes; shifts hotspot destinations",
+      "status": "reproduced",
+      "current_devel_retest": {
+        "at": "2026-10-07T03:13:55.910266+00:00",
+        "revisions": {
+          "sst-core": "09bc3927b1fc23e65f3aa0795739cad36f315d5a",
+          "sst-elements": "47b99537882df309fa2bdb2eb60c9a1e16efb5e5"
+        },
+        "report": "../2026-10-06/index.md",
+        "assessment": "../2026-10-06/evidence/assessment.json",
+        "status": "reproduced",
+        "observed": {
+          "draws_and_indices": [
+            [
+              0.1,
+              1
+            ],
+            [
+              0.5,
+              2
+            ],
+            [
+              0.99,
+              2
+            ]
+          ],
+          "hotspot_destinations": [
+            4,
+            4,
+            4
+          ]
+        },
+        "expected": {
+          "indices": [
+            0,
+            1,
+            1
+          ],
+          "hotspot_destinations": [
+            3,
+            3,
+            3
+          ]
+        },
+        "runs": [
+          "basic",
+          "hotspot"
+        ],
+        "commands": [
+          [
+            "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/install/bin/sst",
+            "--add-lib-path=/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/reassessment-2026-10-06",
+            "--stop-at=5ns",
+            "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/reviews/core/2026-10-06/probes/probe.py",
+            "--",
+            "basic"
+          ],
+          [
+            "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/install/bin/sst",
+            "--add-lib-path=/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/reassessment-2026-10-06",
+            "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/reviews/core/2026-10-06/probes/hotspot.py"
+          ]
+        ]
+      },
+      "fix_revision": null,
+      "notes": "Reproduced on the recorded devel revisions; no repair applied. Scope/exposure limitations are retained in the current reassessment report."
+    },
+    {
+      "id": "F04",
+      "historical_priority": "P1, conditional",
+      "feature": "Polymorphic unique_ptr serialization",
+      "historical_observation": "Restores ExtendedRequest as Request and leaves bytes unread",
+      "status": "reproduced",
+      "current_devel_retest": {
+        "at": "2026-10-07T03:13:55.910266+00:00",
+        "revisions": {
+          "sst-core": "09bc3927b1fc23e65f3aa0795739cad36f315d5a",
+          "sst-elements": "47b99537882df309fa2bdb2eb60c9a1e16efb5e5"
+        },
+        "report": "../2026-10-06/index.md",
+        "assessment": "../2026-10-06/evidence/assessment.json",
+        "status": "reproduced",
+        "observed": {
+          "raw": {
+            "consumed": 52,
+            "buffer": 52,
+            "dynamic_type_preserved": true
+          },
+          "unique": {
+            "consumed": 40,
+            "buffer": 44,
+            "dynamic_type_preserved": false
+          },
+          "raw_request": {
+            "consumed": 98,
+            "buffer": 98,
+            "dynamic_type_preserved": true
+          },
+          "unique_request": {
+            "consumed": 55,
+            "buffer": 90,
+            "dynamic_type_preserved": false
+          }
+        },
+        "expected": {
+          "dynamic_type_preserved": true,
+          "complete_stream_consumption": true
+        },
+        "runs": [
+          "raw",
+          "unique",
+          "raw_request",
+          "unique_request"
+        ],
+        "commands": [
+          [
+            "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/install/bin/sst",
+            "--add-lib-path=/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/reassessment-2026-10-06",
+            "--stop-at=5ns",
+            "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/reviews/core/2026-10-06/probes/probe.py",
+            "--",
+            "raw"
+          ],
+          [
+            "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/install/bin/sst",
+            "--add-lib-path=/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/reassessment-2026-10-06",
+            "--stop-at=5ns",
+            "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/reviews/core/2026-10-06/probes/probe.py",
+            "--",
+            "unique"
+          ],
+          [
+            "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/install/bin/sst",
+            "--add-lib-path=/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/reassessment-2026-10-06",
+            "--stop-at=5ns",
+            "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/reviews/core/2026-10-06/probes/probe.py",
+            "--",
+            "raw_request"
+          ],
+          [
+            "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/install/bin/sst",
+            "--add-lib-path=/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/reassessment-2026-10-06",
+            "--stop-at=5ns",
+            "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/reviews/core/2026-10-06/probes/probe.py",
+            "--",
+            "unique_request"
+          ]
+        ]
+      },
+      "fix_revision": null,
+      "notes": "Reproduced on the recorded devel revisions; no repair applied. Scope/exposure limitations are retained in the current reassessment report."
+    },
+    {
+      "id": "F05",
+      "historical_priority": "P2",
+      "feature": "StandardMem locked-write responses",
+      "historical_observation": "makeResponse resets the virtual address in both request and response",
+      "status": "reproduced",
+      "current_devel_retest": {
+        "at": "2026-10-07T03:13:55.910266+00:00",
+        "revisions": {
+          "sst-core": "09bc3927b1fc23e65f3aa0795739cad36f315d5a",
+          "sst-elements": "47b99537882df309fa2bdb2eb60c9a1e16efb5e5"
+        },
+        "report": "../2026-10-06/index.md",
+        "assessment": "../2026-10-06/evidence/assessment.json",
+        "status": "reproduced",
+        "observed": {
+          "request_vaddr": 0,
+          "response_vaddr": 0
+        },
+        "expected": {
+          "request_vaddr": 32768,
+          "response_vaddr": 32768
+        },
+        "runs": [
+          "basic"
+        ],
+        "commands": [
+          [
+            "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/install/bin/sst",
+            "--add-lib-path=/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/reassessment-2026-10-06",
+            "--stop-at=5ns",
+            "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/reviews/core/2026-10-06/probes/probe.py",
+            "--",
+            "basic"
+          ]
+        ]
+      },
+      "fix_revision": null,
+      "notes": "Reproduced on the recorded devel revisions; no repair applied. Scope/exposure limitations are retained in the current reassessment report."
+    },
+    {
+      "id": "F06",
+      "historical_priority": "P2",
+      "feature": "Subcomponent statistic configuration",
+      "historical_observation": "Re-enabling a named statistic loses new settings",
+      "status": "reproduced",
+      "current_devel_retest": {
+        "at": "2026-10-07T03:13:55.910266+00:00",
+        "revisions": {
+          "sst-core": "09bc3927b1fc23e65f3aa0795739cad36f315d5a",
+          "sst-elements": "47b99537882df309fa2bdb2eb60c9a1e16efb5e5"
+        },
+        "report": "../2026-10-06/index.md",
+        "assessment": "../2026-10-06/evidence/assessment.json",
+        "status": "reproduced",
+        "observed": {
+          "once": {
+            "rate": "10ns"
+          },
+          "twice": {
+            "rate": "10ns"
+          }
+        },
+        "expected": {
+          "twice_contains": {
+            "rate": "10ns",
+            "type": "sst.HistogramStatistic",
+            "binwidth": 2
+          }
+        },
+        "runs": [
+          "substats_once",
+          "substats_twice"
+        ],
+        "commands": [
+          [
+            "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/install/bin/sst",
+            "--add-lib-path=/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/reassessment-2026-10-06",
+            "--output-json=/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/reassessment-2026-10-06/substats_once.json",
+            "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/reviews/core/2026-10-06/probes/substats.py",
+            "--",
+            "once"
+          ],
+          [
+            "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/install/bin/sst",
+            "--add-lib-path=/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/reassessment-2026-10-06",
+            "--output-json=/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/reassessment-2026-10-06/substats_twice.json",
+            "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/reviews/core/2026-10-06/probes/substats.py",
+            "--",
+            "twice"
+          ]
+        ]
+      },
+      "fix_revision": null,
+      "notes": "Reproduced on the recorded devel revisions; no repair applied. Scope/exposure limitations are retained in the current reassessment report."
+    },
+    {
+      "id": "F07",
+      "historical_priority": "P2",
+      "feature": "Batched histogram samples",
+      "historical_observation": "100 samples produce NumItemsBinned=1",
+      "status": "reproduced",
+      "current_devel_retest": {
+        "at": "2026-10-07T03:13:55.910266+00:00",
+        "revisions": {
+          "sst-core": "09bc3927b1fc23e65f3aa0795739cad36f315d5a",
+          "sst-elements": "47b99537882df309fa2bdb2eb60c9a1e16efb5e5"
+        },
+        "report": "../2026-10-06/index.md",
+        "assessment": "../2026-10-06/evidence/assessment.json",
+        "status": "reproduced",
+        "observed": {
+          "NumItemsCollected": 100,
+          "NumItemsBinned": 1,
+          "bin_population": 100
+        },
+        "expected": {
+          "NumItemsCollected": 100,
+          "NumItemsBinned": 100,
+          "bin_population": 100
+        },
+        "runs": [
+          "basic"
+        ],
+        "commands": [
+          [
+            "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/install/bin/sst",
+            "--add-lib-path=/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/reassessment-2026-10-06",
+            "--stop-at=5ns",
+            "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/reviews/core/2026-10-06/probes/probe.py",
+            "--",
+            "basic"
+          ]
+        ]
+      },
+      "fix_revision": null,
+      "notes": "Reproduced on the recorded devel revisions; no repair applied. Scope/exposure limitations are retained in the current reassessment report."
+    },
+    {
+      "id": "F08",
+      "historical_priority": "P2",
+      "feature": "Histogram origin",
+      "historical_observation": "Non-aligned minvalue makes valid samples disappear from output bins",
+      "status": "reproduced",
+      "current_devel_retest": {
+        "at": "2026-10-07T03:13:55.910266+00:00",
+        "revisions": {
+          "sst-core": "09bc3927b1fc23e65f3aa0795739cad36f315d5a",
+          "sst-elements": "47b99537882df309fa2bdb2eb60c9a1e16efb5e5"
+        },
+        "report": "../2026-10-06/index.md",
+        "assessment": "../2026-10-06/evidence/assessment.json",
+        "status": "reproduced",
+        "observed": {
+          "collected": 2,
+          "binned": 2,
+          "displayed_bins": [
+            0,
+            0
+          ]
+        },
+        "expected": {
+          "collected": 2,
+          "binned": 2,
+          "displayed_bins": [
+            2,
+            0
+          ]
+        },
+        "runs": [
+          "basic",
+          "element_stats_integer"
+        ],
+        "commands": [
+          [
+            "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/install/bin/sst",
+            "--add-lib-path=/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/reassessment-2026-10-06",
+            "--stop-at=5ns",
+            "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/reviews/core/2026-10-06/probes/probe.py",
+            "--",
+            "basic"
+          ],
+          [
+            "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/install/bin/sst",
+            "--add-lib-path=/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/reassessment-2026-10-06",
+            "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/reviews/core/2026-10-06/probes/statistics.py",
+            "--",
+            "integer"
+          ]
+        ]
+      },
+      "fix_revision": null,
+      "notes": "Reproduced on the recorded devel revisions; no repair applied. Scope/exposure limitations are retained in the current reassessment report."
+    },
+    {
+      "id": "F09",
+      "historical_priority": "P2",
+      "feature": "Floating-point histogram range",
+      "historical_observation": "The final bin rejects valid fractional samples",
+      "status": "reproduced",
+      "current_devel_retest": {
+        "at": "2026-10-07T03:13:55.910266+00:00",
+        "revisions": {
+          "sst-core": "09bc3927b1fc23e65f3aa0795739cad36f315d5a",
+          "sst-elements": "47b99537882df309fa2bdb2eb60c9a1e16efb5e5"
+        },
+        "report": "../2026-10-06/index.md",
+        "assessment": "../2026-10-06/evidence/assessment.json",
+        "status": "reproduced",
+        "observed": {
+          "collected": 1,
+          "binned": 0,
+          "above_max": 1
+        },
+        "expected": {
+          "collected": 1,
+          "binned": 1,
+          "above_max": 0
+        },
+        "runs": [
+          "basic",
+          "element_stats_floating"
+        ],
+        "commands": [
+          [
+            "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/install/bin/sst",
+            "--add-lib-path=/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/reassessment-2026-10-06",
+            "--stop-at=5ns",
+            "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/reviews/core/2026-10-06/probes/probe.py",
+            "--",
+            "basic"
+          ],
+          [
+            "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/install/bin/sst",
+            "--add-lib-path=/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/reassessment-2026-10-06",
+            "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/reviews/core/2026-10-06/probes/statistics.py",
+            "--",
+            "floating"
+          ]
+        ]
+      },
+      "fix_revision": null,
+      "notes": "Reproduced on the recorded devel revisions; no repair applied. Scope/exposure limitations are retained in the current reassessment report."
+    },
+    {
+      "id": "F10",
+      "historical_priority": "P2",
+      "feature": "Floating-point accumulator maximum",
+      "historical_observation": "Negative-only data reports a tiny positive maximum",
+      "status": "reproduced",
+      "current_devel_retest": {
+        "at": "2026-10-07T03:13:55.910266+00:00",
+        "revisions": {
+          "sst-core": "09bc3927b1fc23e65f3aa0795739cad36f315d5a",
+          "sst-elements": "47b99537882df309fa2bdb2eb60c9a1e16efb5e5"
+        },
+        "report": "../2026-10-06/index.md",
+        "assessment": "../2026-10-06/evidence/assessment.json",
+        "status": "reproduced",
+        "observed": {
+          "maximum": 2.2250738585072014e-308
+        },
+        "expected": {
+          "maximum": -1
+        },
+        "runs": [
+          "basic"
+        ],
+        "commands": [
+          [
+            "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/install/bin/sst",
+            "--add-lib-path=/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/reassessment-2026-10-06",
+            "--stop-at=5ns",
+            "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/reviews/core/2026-10-06/probes/probe.py",
+            "--",
+            "basic"
+          ]
+        ]
+      },
+      "fix_revision": null,
+      "notes": "Reproduced on the recorded devel revisions; no repair applied. Scope/exposure limitations are retained in the current reassessment report."
+    },
+    {
+      "id": "F11",
+      "historical_priority": "P2, limited current exposure",
+      "feature": "Accumulator variance API",
+      "historical_observation": "Returns the unnormalized numerator instead of variance",
+      "status": "reproduced",
+      "current_devel_retest": {
+        "at": "2026-10-07T03:13:55.910266+00:00",
+        "revisions": {
+          "sst-core": "09bc3927b1fc23e65f3aa0795739cad36f315d5a",
+          "sst-elements": "47b99537882df309fa2bdb2eb60c9a1e16efb5e5"
+        },
+        "report": "../2026-10-06/index.md",
+        "assessment": "../2026-10-06/evidence/assessment.json",
+        "status": "reproduced",
+        "observed": {
+          "variance": 4.0
+        },
+        "expected": {
+          "population_variance": 1,
+          "sample_variance": 2
+        },
+        "runs": [
+          "basic"
+        ],
+        "commands": [
+          [
+            "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/install/bin/sst",
+            "--add-lib-path=/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/reassessment-2026-10-06",
+            "--stop-at=5ns",
+            "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/reviews/core/2026-10-06/probes/probe.py",
+            "--",
+            "basic"
+          ]
+        ]
+      },
+      "fix_revision": null,
+      "notes": "Reproduced on the recorded devel revisions; no repair applied. Scope/exposure limitations are retained in the current reassessment report."
+    }
+  ],
+  "reassessed_at": "2026-10-07T03:13:55.910266+00:00"
+}

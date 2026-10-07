@@ -1,0 +1,73 @@
+{
+"program_options":{
+  "verbose": "0",
+  "stop-at": "30ns",
+  "timing-info": "0",
+  "heartbeat-sim-period": "",
+  "heartbeat-wall-period": "0",
+  "timebase": "1ps",
+  "partitioner": "sst.single",
+  "timeVortex": "sst.timevortex.priority_queue",
+  "interthread-links": "false",
+  "output-prefix-core": "#@x SST Core: ",
+  "checkpoint-sim-period": "",
+  "checkpoint-wall-period": "0"
+},
+"statistics_options":{
+  "statisticLoadLevel": 1,
+  "statisticOutput": "sst.statOutputConsole"
+},
+"components": [
+{
+  "name": "loader",
+  "type": "coreTestElement.SubComponentLoader",
+  "subcomponents": [
+    {
+      "slot_name": "mySubComp",
+      "slot_number": 0,
+      "type": "coreTestElement.SubCompReceiver",
+      "statistics": [
+        {
+          "name": "numRecv",
+          "params": {
+            "rate": "10ns"
+          }
+        }
+      ]
+    }
+  ]
+},
+{
+  "name": "sender",
+  "type": "coreTestElement.SubComponentLoader",
+  "subcomponents": [
+    {
+      "slot_name": "mySubComp",
+      "slot_number": 0,
+      "type": "coreTestElement.SubCompSender",
+      "params": {
+        "sendCount": "3"
+      }
+    }
+  ]
+}
+],
+"statistics_group": null,
+"links": [
+{
+  "name": "wire",
+  "noCut": false,
+  "nonlocal": false,
+  "left": {
+    "component": "sender:mySubComp[0]",
+    "port": "sendPort",
+    "latency": "1 ns"
+  },
+  "right": {
+    "component": "loader:mySubComp[0]",
+    "port": "recvPort",
+    "latency": "1 ns"
+  }
+}
+]
+}

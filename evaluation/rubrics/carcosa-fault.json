@@ -1,0 +1,16 @@
+{
+  "task": "carcosa-fault",
+  "criteria": [
+    "Injection placement and address/bit/timing explicit",
+    "No-fault baseline and deterministic fault case use comparable setup",
+    "Executable oracle verifies fault effect and unaffected data",
+    "Binary/ISA and working-directory prerequisites recorded",
+    "No C++ changes and natural completion or justified bounded failure"
+  ],
+  "verdicts": [
+    "pass",
+    "fail",
+    "blocked"
+  ],
+  "rule": "Pass only when all criteria have execution evidence. Missing prerequisites or a source capability gap demonstrated under the task constraints is blocked, not pass. An unsupported substitution is fail. Evaluate behavior rather than an exact implementation."
+}

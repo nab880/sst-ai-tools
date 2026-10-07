@@ -1,0 +1,16 @@
+{
+  "task": "mercury-runtime",
+  "criteria": [
+    "Actual Mercury ELI registration used",
+    "Existing workload semantics preserved in runnable configuration",
+    "Expected application output and natural completion verified",
+    "Architecture and SST rank/thread restrictions identified",
+    "No C++ changes"
+  ],
+  "verdicts": [
+    "pass",
+    "fail",
+    "blocked"
+  ],
+  "rule": "Pass only when all criteria have execution evidence. Missing runtime/artifacts is blocked, not pass. Evaluate behavior rather than an exact implementation."
+}

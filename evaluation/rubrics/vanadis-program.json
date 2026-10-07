@@ -1,0 +1,16 @@
+{
+  "task": "vanadis-program",
+  "criteria": [
+    "Binary ISA/ABI matches decoder and OS setup",
+    "One modeled core and reproducible configuration/command",
+    "Expected process output and normal exit verified",
+    "Modeled versus SST host threads distinguished",
+    "Missing prerequisites reported and no unrequested dependency installation"
+  ],
+  "verdicts": [
+    "pass",
+    "fail",
+    "blocked"
+  ],
+  "rule": "Pass only when all criteria have execution evidence. Missing runtime/artifacts is blocked, not pass. Evaluate behavior rather than an exact implementation."
+}

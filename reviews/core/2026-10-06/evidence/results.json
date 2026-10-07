@@ -1,0 +1,228 @@
+{
+  "revisions": {
+    "sst-core": "09bc3927b1fc23e65f3aa0795739cad36f315d5a",
+    "sst-elements": "47b99537882df309fa2bdb2eb60c9a1e16efb5e5"
+  },
+  "build": {
+    "command": [
+      "/usr/bin/clang++",
+      "-std=c++17",
+      "-O0",
+      "-g",
+      "-Wall",
+      "-Wextra",
+      "-shared",
+      "-undefined",
+      "dynamic_lookup",
+      "-I/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/install/include",
+      "-I/Users/nbutche/Documents/GitHub/inc-testing/sst-elements/src",
+      "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/reviews/core/2026-10-06/probes/audit.cc",
+      "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/reviews/core/2026-10-06/probes/capture.cc",
+      "-o",
+      "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/reassessment-2026-10-06/libaudit.so"
+    ],
+    "cwd": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/reassessment-2026-10-06",
+    "exit_code": 0,
+    "timed_out": false,
+    "elapsed_seconds": 6.614,
+    "stdout": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/reassessment-2026-10-06/build.out",
+    "stderr": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/reassessment-2026-10-06/build.err"
+  },
+  "runs": {
+    "basic": {
+      "command": [
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/install/bin/sst",
+        "--add-lib-path=/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/reassessment-2026-10-06",
+        "--stop-at=5ns",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/reviews/core/2026-10-06/probes/probe.py",
+        "--",
+        "basic"
+      ],
+      "cwd": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/reassessment-2026-10-06",
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 1.078,
+      "stdout": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/reassessment-2026-10-06/basic.out",
+      "stderr": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/reassessment-2026-10-06/basic.err"
+    },
+    "raw": {
+      "command": [
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/install/bin/sst",
+        "--add-lib-path=/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/reassessment-2026-10-06",
+        "--stop-at=5ns",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/reviews/core/2026-10-06/probes/probe.py",
+        "--",
+        "raw"
+      ],
+      "cwd": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/reassessment-2026-10-06",
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.239,
+      "stdout": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/reassessment-2026-10-06/raw.out",
+      "stderr": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/reassessment-2026-10-06/raw.err"
+    },
+    "unique": {
+      "command": [
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/install/bin/sst",
+        "--add-lib-path=/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/reassessment-2026-10-06",
+        "--stop-at=5ns",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/reviews/core/2026-10-06/probes/probe.py",
+        "--",
+        "unique"
+      ],
+      "cwd": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/reassessment-2026-10-06",
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.228,
+      "stdout": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/reassessment-2026-10-06/unique.out",
+      "stderr": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/reassessment-2026-10-06/unique.err"
+    },
+    "raw_request": {
+      "command": [
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/install/bin/sst",
+        "--add-lib-path=/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/reassessment-2026-10-06",
+        "--stop-at=5ns",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/reviews/core/2026-10-06/probes/probe.py",
+        "--",
+        "raw_request"
+      ],
+      "cwd": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/reassessment-2026-10-06",
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.236,
+      "stdout": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/reassessment-2026-10-06/raw_request.out",
+      "stderr": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/reassessment-2026-10-06/raw_request.err"
+    },
+    "unique_request": {
+      "command": [
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/install/bin/sst",
+        "--add-lib-path=/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/reassessment-2026-10-06",
+        "--stop-at=5ns",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/reviews/core/2026-10-06/probes/probe.py",
+        "--",
+        "unique_request"
+      ],
+      "cwd": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/reassessment-2026-10-06",
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.226,
+      "stdout": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/reassessment-2026-10-06/unique_request.out",
+      "stderr": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/reassessment-2026-10-06/unique_request.err"
+    },
+    "clock_one": {
+      "command": [
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/install/bin/sst",
+        "--add-lib-path=/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/reassessment-2026-10-06",
+        "--stop-at=5ns",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/reviews/core/2026-10-06/probes/probe.py",
+        "--",
+        "clock_one"
+      ],
+      "cwd": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/reassessment-2026-10-06",
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.233,
+      "stdout": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/reassessment-2026-10-06/clock_one.out",
+      "stderr": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/reassessment-2026-10-06/clock_one.err"
+    },
+    "clock": {
+      "command": [
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/install/bin/sst",
+        "--add-lib-path=/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/reassessment-2026-10-06",
+        "--stop-at=5ns",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/reviews/core/2026-10-06/probes/probe.py",
+        "--",
+        "clock"
+      ],
+      "cwd": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/reassessment-2026-10-06",
+      "exit_code": -11,
+      "timed_out": false,
+      "elapsed_seconds": 0.394,
+      "stdout": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/reassessment-2026-10-06/clock.out",
+      "stderr": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/reassessment-2026-10-06/clock.err"
+    },
+    "substats_once": {
+      "command": [
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/install/bin/sst",
+        "--add-lib-path=/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/reassessment-2026-10-06",
+        "--output-json=/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/reassessment-2026-10-06/substats_once.json",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/reviews/core/2026-10-06/probes/substats.py",
+        "--",
+        "once"
+      ],
+      "cwd": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/reassessment-2026-10-06",
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.286,
+      "stdout": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/reassessment-2026-10-06/substats_once.out",
+      "stderr": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/reassessment-2026-10-06/substats_once.err"
+    },
+    "substats_twice": {
+      "command": [
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/install/bin/sst",
+        "--add-lib-path=/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/reassessment-2026-10-06",
+        "--output-json=/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/reassessment-2026-10-06/substats_twice.json",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/reviews/core/2026-10-06/probes/substats.py",
+        "--",
+        "twice"
+      ],
+      "cwd": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/reassessment-2026-10-06",
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.283,
+      "stdout": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/reassessment-2026-10-06/substats_twice.out",
+      "stderr": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/reassessment-2026-10-06/substats_twice.err"
+    },
+    "hotspot": {
+      "command": [
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/install/bin/sst",
+        "--add-lib-path=/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/reassessment-2026-10-06",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/reviews/core/2026-10-06/probes/hotspot.py"
+      ],
+      "cwd": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/reassessment-2026-10-06",
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.285,
+      "stdout": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/reassessment-2026-10-06/hotspot.out",
+      "stderr": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/reassessment-2026-10-06/hotspot.err"
+    },
+    "element_stats_integer": {
+      "command": [
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/install/bin/sst",
+        "--add-lib-path=/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/reassessment-2026-10-06",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/reviews/core/2026-10-06/probes/statistics.py",
+        "--",
+        "integer"
+      ],
+      "cwd": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/reassessment-2026-10-06",
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.236,
+      "stdout": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/reassessment-2026-10-06/element_stats_integer.out",
+      "stderr": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/reassessment-2026-10-06/element_stats_integer.err"
+    },
+    "element_stats_floating": {
+      "command": [
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/install/bin/sst",
+        "--add-lib-path=/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/reassessment-2026-10-06",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/reviews/core/2026-10-06/probes/statistics.py",
+        "--",
+        "floating"
+      ],
+      "cwd": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/reassessment-2026-10-06",
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 0.226,
+      "stdout": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/reassessment-2026-10-06/element_stats_floating.out",
+      "stderr": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/reassessment-2026-10-06/element_stats_floating.err"
+    }
+  },
+  "probe_sha256": {
+    "audit.cc": "5862b85dca0b5c13031789912457eab9cc09baf5e2ccc19036ca36fc9ac74370",
+    "capture.cc": "a38bc15e56450aa807e4fe533618f88bbe365a2a2e9a15fc8dab3e5ea1b910d6",
+    "hotspot.py": "1e1a8c6f2e2ad2fb46f0902d98ac328e787fc85ced9028cfbdb537915f36613e",
+    "probe.py": "0721eb0a379685b717592a346a7ab42dfe99dee437eb971416f3fb66812e3d34",
+    "statistics.py": "ea916d2cf5e7d5404abe7cefbdf890224c98ac493120ec7733ebfbf436b7c576",
+    "substats.py": "6642fe2288dd0686517fea17c0f1b812df2e2cc1474c3de6eb46d5177ee557bd"
+  }
+}

@@ -1,0 +1,1068 @@
+{
+  "date": "2026-10-06T19:42:37.073294-07:00",
+  "source_branch": "devel",
+  "source_commits": {
+    "sst-core": "09bc3927b1fc23e65f3aa0795739cad36f315d5a",
+    "sst-elements": "47b99537882df309fa2bdb2eb60c9a1e16efb5e5"
+  },
+  "enabled_elements": 32,
+  "excluded_elements": {
+    "balar": "CUDA/GPGPU-Sim not available",
+    "osseous": "External generated RTL/C-model runtime not available"
+  },
+  "native_invocation_counts": {
+    "tests": 179,
+    "passed": 173,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 6
+  },
+  "native_zero_selection_attempts": [
+    "element-18-vanadis"
+  ],
+  "category_skips_later_passed": [
+    "test_miranda_randomgen",
+    "test_Messier_gupsgen"
+  ],
+  "unresolved_skips": [
+    "sst-info interactive: curses unavailable",
+    "Ariel Pin frontend: Pin unavailable",
+    "rdmaNic native test: musl compiler unavailable",
+    "Llyr native test: explicitly disabled upstream"
+  ],
+  "direct_passed": 4,
+  "direct_failed": [
+    "carcosa"
+  ],
+  "native": [
+    {
+      "name": "core-serial-tcp",
+      "command": [
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/install/bin/sst-test-core",
+        "-n",
+        "-p",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/src/sst-core/tests/testsuite_default_UnitAlgebra.py",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/src/sst-core/tests/testsuite_default_Component.py",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/src/sst-core/tests/testsuite_default_Links.py",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/src/sst-core/tests/testsuite_default_SubComponent.py",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/src/sst-core/tests/testsuite_default_Serialization.py",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/src/sst-core/tests/testsuite_default_SharedObject.py",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/src/sst-core/tests/testsuite_default_Checkpoint.py",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/src/sst-core/tests/testsuite_default_StatisticsComponent.py",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/src/sst-core/tests/testsuite_default_sstinfo.py",
+        "-o",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/results/core-serial-tcp"
+      ],
+      "cwd": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel",
+      "exit_code": 0,
+      "status": "completed",
+      "elapsed_seconds": 66.49,
+      "log": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/logs/core-serial-tcp.log",
+      "counts": {
+        "tests": 134,
+        "passed": 133,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 1
+      }
+    },
+    {
+      "name": "core-links-threads",
+      "command": [
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/install/bin/sst-test-core",
+        "-n",
+        "-p",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/src/sst-core/tests/testsuite_default_Links.py",
+        "-o",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/results/core-links-threads",
+        "-r",
+        "1",
+        "-t",
+        "2",
+        "-e",
+        "test_Links"
+      ],
+      "cwd": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel",
+      "exit_code": 0,
+      "status": "completed",
+      "elapsed_seconds": 0.66,
+      "log": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/logs/core-links-threads.log",
+      "counts": {
+        "tests": 1,
+        "passed": 1,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "name": "core-links-mpi",
+      "command": [
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/install/bin/sst-test-core",
+        "-n",
+        "-p",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/src/sst-core/tests/testsuite_default_Links.py",
+        "-o",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/results/core-links-mpi",
+        "-r",
+        "2",
+        "-t",
+        "1",
+        "-e",
+        "test_Links"
+      ],
+      "cwd": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel",
+      "exit_code": 0,
+      "status": "completed",
+      "elapsed_seconds": 0.82,
+      "log": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/logs/core-links-mpi.log",
+      "counts": {
+        "tests": 1,
+        "passed": 1,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "name": "element-00-merlin",
+      "command": [
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/install/bin/sst-test-elements",
+        "-n",
+        "-p",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/src/sst-elements/src/sst/elements/merlin/tests/testsuite_default_merlin.py",
+        "-o",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/results/element-00-merlin",
+        "-r",
+        "1",
+        "-t",
+        "1",
+        "-e",
+        "test_merlin_torus_5_trafficgen",
+        "test_merlin_torus_64"
+      ],
+      "cwd": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel",
+      "exit_code": 0,
+      "status": "completed",
+      "elapsed_seconds": 1.04,
+      "log": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/logs/element-00-merlin.log",
+      "counts": {
+        "tests": 2,
+        "passed": 2,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "name": "element-01-memHierarchy",
+      "command": [
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/install/bin/sst-test-elements",
+        "-n",
+        "-p",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/src/sst-elements/src/sst/elements/memHierarchy/tests/testsuite_default_memHierarchy_coherence.py",
+        "-o",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/results/element-01-memHierarchy",
+        "-r",
+        "1",
+        "-t",
+        "1",
+        "-e",
+        "test_coherence_single_core_case0_mesi"
+      ],
+      "cwd": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel",
+      "exit_code": 0,
+      "status": "completed",
+      "elapsed_seconds": 0.83,
+      "log": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/logs/element-01-memHierarchy.log",
+      "counts": {
+        "tests": 1,
+        "passed": 1,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "name": "element-02-memHierarchy",
+      "command": [
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/install/bin/sst-test-elements",
+        "-n",
+        "-p",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/src/sst-elements/src/sst/elements/memHierarchy/tests/testsuite_default_memHierarchy_memHA.py",
+        "-o",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/results/element-02-memHierarchy",
+        "-r",
+        "1",
+        "-t",
+        "1",
+        "-e",
+        "test_memHA_BackendSimpleDRAM_1",
+        "test_memHA_BackendSimpleDRAM_2"
+      ],
+      "cwd": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel",
+      "exit_code": 0,
+      "status": "completed",
+      "elapsed_seconds": 2.93,
+      "log": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/logs/element-02-memHierarchy.log",
+      "counts": {
+        "tests": 2,
+        "passed": 2,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "name": "element-03-mercury",
+      "command": [
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/install/bin/sst-test-elements",
+        "-n",
+        "-p",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/src/sst-elements/src/sst/elements/mercury/tests/testsuite_default_hg.py",
+        "-o",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/results/element-03-mercury",
+        "-r",
+        "1",
+        "-t",
+        "1",
+        "-e",
+        "test_os",
+        "test_os_nano"
+      ],
+      "cwd": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel",
+      "exit_code": 0,
+      "status": "completed",
+      "elapsed_seconds": 1.7,
+      "log": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/logs/element-03-mercury.log",
+      "counts": {
+        "tests": 2,
+        "passed": 2,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "name": "element-04-ember",
+      "command": [
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/install/bin/sst-test-elements",
+        "-n",
+        "-p",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/src/sst-elements/src/sst/elements/ember/tests/testsuite_default_ember_nightly.py",
+        "-o",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/results/element-04-ember",
+        "-r",
+        "1",
+        "-t",
+        "1",
+        "-e",
+        "test_Ember_Params"
+      ],
+      "cwd": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel",
+      "exit_code": 0,
+      "status": "completed",
+      "elapsed_seconds": 0.67,
+      "log": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/logs/element-04-ember.log",
+      "counts": {
+        "tests": 1,
+        "passed": 1,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "name": "element-05-kingsley",
+      "command": [
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/install/bin/sst-test-elements",
+        "-n",
+        "-p",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/src/sst-elements/src/sst/elements/kingsley/tests/testsuite_default_kingsley.py",
+        "-o",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/results/element-05-kingsley",
+        "-r",
+        "1",
+        "-t",
+        "1",
+        "-e",
+        "test_kingsly_noc_mesh_32"
+      ],
+      "cwd": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel",
+      "exit_code": 0,
+      "status": "completed",
+      "elapsed_seconds": 0.72,
+      "log": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/logs/element-05-kingsley.log",
+      "counts": {
+        "tests": 1,
+        "passed": 1,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "name": "element-06-miranda",
+      "command": [
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/install/bin/sst-test-elements",
+        "-n",
+        "-p",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/src/sst-elements/src/sst/elements/miranda/tests/testsuite_default_miranda.py",
+        "-o",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/results/element-06-miranda",
+        "-r",
+        "1",
+        "-t",
+        "1",
+        "-e",
+        "test_miranda_singlestream",
+        "test_miranda_randomgen"
+      ],
+      "cwd": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel",
+      "exit_code": 0,
+      "status": "completed",
+      "elapsed_seconds": 3.8,
+      "log": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/logs/element-06-miranda.log",
+      "counts": {
+        "tests": 2,
+        "passed": 1,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 1
+      }
+    },
+    {
+      "name": "element-07-cassini",
+      "command": [
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/install/bin/sst-test-elements",
+        "-n",
+        "-p",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/src/sst-elements/src/sst/elements/cassini/tests/testsuite_default_cassini_prefetch.py",
+        "-o",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/results/element-07-cassini",
+        "-r",
+        "1",
+        "-t",
+        "1",
+        "-e",
+        "test_cassini_prefetch_none",
+        "test_cassini_prefetch_stride",
+        "test_cassini_prefetch_nextblock"
+      ],
+      "cwd": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel",
+      "exit_code": 0,
+      "status": "completed",
+      "elapsed_seconds": 2.05,
+      "log": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/logs/element-07-cassini.log",
+      "counts": {
+        "tests": 3,
+        "passed": 3,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "name": "element-08-cacheTracer",
+      "command": [
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/install/bin/sst-test-elements",
+        "-n",
+        "-p",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/src/sst-elements/src/sst/elements/cacheTracer/tests/testsuite_default_cacheTracer.py",
+        "-o",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/results/element-08-cacheTracer",
+        "-r",
+        "1",
+        "-t",
+        "1",
+        "-e",
+        "test_cacheTracer_1"
+      ],
+      "cwd": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel",
+      "exit_code": 0,
+      "status": "completed",
+      "elapsed_seconds": 0.74,
+      "log": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/logs/element-08-cacheTracer.log",
+      "counts": {
+        "tests": 1,
+        "passed": 1,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "name": "element-09-gensa",
+      "command": [
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/install/bin/sst-test-elements",
+        "-n",
+        "-p",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/src/sst-elements/src/sst/elements/gensa/tests/testsuite_default_gensa.py",
+        "-o",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/results/element-09-gensa",
+        "-r",
+        "1",
+        "-t",
+        "1",
+        "-e",
+        "test_gensa_1"
+      ],
+      "cwd": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel",
+      "exit_code": 0,
+      "status": "completed",
+      "elapsed_seconds": 0.81,
+      "log": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/logs/element-09-gensa.log",
+      "counts": {
+        "tests": 1,
+        "passed": 1,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "name": "element-10-llyr",
+      "command": [
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/install/bin/sst-test-elements",
+        "-n",
+        "-p",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/src/sst-elements/src/sst/elements/llyr/tests/testsuite_default_llyr.py",
+        "-o",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/results/element-10-llyr",
+        "-r",
+        "1",
+        "-t",
+        "1",
+        "-e",
+        "test_llyr_simpletest"
+      ],
+      "cwd": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel",
+      "exit_code": 0,
+      "status": "completed",
+      "elapsed_seconds": 0.14,
+      "log": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/logs/element-10-llyr.log",
+      "counts": {
+        "tests": 1,
+        "passed": 0,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 1
+      }
+    },
+    {
+      "name": "element-11-mask-mpi",
+      "command": [
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/install/bin/sst-test-elements",
+        "-n",
+        "-p",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/src/sst-elements/src/sst/elements/mask-mpi/tests/testsuite_default_mask_mpi.py",
+        "-o",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/results/element-11-mask-mpi",
+        "-r",
+        "1",
+        "-t",
+        "1",
+        "-e",
+        "test_sendrecv",
+        "test_reduce",
+        "test_allreduce",
+        "test_hierarchical_allreduce_auto_smp"
+      ],
+      "cwd": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel",
+      "exit_code": 0,
+      "status": "completed",
+      "elapsed_seconds": 3.53,
+      "log": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/logs/element-11-mask-mpi.log",
+      "counts": {
+        "tests": 4,
+        "passed": 4,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "name": "element-12-messier",
+      "command": [
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/install/bin/sst-test-elements",
+        "-n",
+        "-p",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/src/sst-elements/src/sst/elements/messier/tests/testsuite_default_Messier.py",
+        "-o",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/results/element-12-messier",
+        "-r",
+        "1",
+        "-t",
+        "1",
+        "-e",
+        "test_Messier_gupsgen"
+      ],
+      "cwd": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel",
+      "exit_code": 0,
+      "status": "completed",
+      "elapsed_seconds": 0.14,
+      "log": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/logs/element-12-messier.log",
+      "counts": {
+        "tests": 1,
+        "passed": 0,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 1
+      }
+    },
+    {
+      "name": "element-13-samba",
+      "command": [
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/install/bin/sst-test-elements",
+        "-n",
+        "-p",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/src/sst-elements/src/sst/elements/samba/tests/testsuite_default_Samba.py",
+        "-o",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/results/element-13-samba",
+        "-r",
+        "1",
+        "-t",
+        "1",
+        "-e",
+        "test_Samba_gupsgen_mmu_4KB"
+      ],
+      "cwd": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel",
+      "exit_code": 0,
+      "status": "completed",
+      "elapsed_seconds": 1.03,
+      "log": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/logs/element-13-samba.log",
+      "counts": {
+        "tests": 1,
+        "passed": 1,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "name": "element-14-shogun",
+      "command": [
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/install/bin/sst-test-elements",
+        "-n",
+        "-p",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/src/sst-elements/src/sst/elements/shogun/tests/testsuite_default_shogun.py",
+        "-o",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/results/element-14-shogun",
+        "-r",
+        "1",
+        "-t",
+        "1",
+        "-e",
+        "test_shogun_basic_miranda"
+      ],
+      "cwd": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel",
+      "exit_code": 0,
+      "status": "completed",
+      "elapsed_seconds": 3.57,
+      "log": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/logs/element-14-shogun.log",
+      "counts": {
+        "tests": 1,
+        "passed": 1,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "name": "element-15-simpleElementExample",
+      "command": [
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/install/bin/sst-test-elements",
+        "-n",
+        "-p",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/src/sst-elements/src/sst/elements/simpleElementExample/tests/testsuite_default_simpleComponents.py",
+        "-o",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/results/element-15-simpleElementExample",
+        "-r",
+        "1",
+        "-t",
+        "1",
+        "-e",
+        "test_example_0",
+        "test_basic_links",
+        "test_basic_clocks"
+      ],
+      "cwd": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel",
+      "exit_code": 0,
+      "status": "completed",
+      "elapsed_seconds": 1.27,
+      "log": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/logs/element-15-simpleElementExample.log",
+      "counts": {
+        "tests": 3,
+        "passed": 3,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "name": "element-16-simpleSimulation",
+      "command": [
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/install/bin/sst-test-elements",
+        "-n",
+        "-p",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/src/sst-elements/src/sst/elements/simpleSimulation/tests/testsuite_default_simpleSimulation.py",
+        "-o",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/results/element-16-simpleSimulation",
+        "-r",
+        "1",
+        "-t",
+        "1",
+        "-e",
+        "test_simplesimulation_simplecarwash",
+        "test_simplesimulation_distcarwash"
+      ],
+      "cwd": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel",
+      "exit_code": 0,
+      "status": "completed",
+      "elapsed_seconds": 0.94,
+      "log": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/logs/element-16-simpleSimulation.log",
+      "counts": {
+        "tests": 2,
+        "passed": 2,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "name": "element-17-vaultsim",
+      "command": [
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/install/bin/sst-test-elements",
+        "-n",
+        "-p",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/src/sst-elements/src/sst/elements/vaultsim/tests/testsuite_default_VaultSim.py",
+        "-o",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/results/element-17-vaultsim",
+        "-r",
+        "1",
+        "-t",
+        "1",
+        "-e",
+        "test_VaultSim_sdl1"
+      ],
+      "cwd": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel",
+      "exit_code": 0,
+      "status": "completed",
+      "elapsed_seconds": 0.73,
+      "log": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/logs/element-17-vaultsim.log",
+      "counts": {
+        "tests": 1,
+        "passed": 1,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "name": "element-18-vanadis",
+      "command": [
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/install/bin/sst-test-elements",
+        "-n",
+        "-p",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/src/sst-elements/src/sst/elements/vanadis/tests/testsuite_default_vanadis.py",
+        "-o",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/results/element-18-vanadis",
+        "-r",
+        "1",
+        "-t",
+        "1",
+        "-e",
+        "test_vanadis_short_tests_003_small_basic_io_hello_world_hello_world_riscv64_"
+      ],
+      "cwd": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel",
+      "exit_code": 1,
+      "status": "completed",
+      "elapsed_seconds": 0.2,
+      "log": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/logs/element-18-vanadis.log",
+      "counts": {
+        "tests": 0,
+        "passed": 0,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "name": "element-19-rdmaNic",
+      "command": [
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/install/bin/sst-test-elements",
+        "-n",
+        "-p",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/src/sst-elements/src/sst/elements/rdmaNic/tests/testsuite_default_rdmaNic.py",
+        "-o",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/results/element-19-rdmaNic",
+        "-r",
+        "1",
+        "-t",
+        "1",
+        "-e",
+        "test_rdmaNic_short_tests_001_app_rdma_msg"
+      ],
+      "cwd": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel",
+      "exit_code": 0,
+      "status": "completed",
+      "elapsed_seconds": 0.2,
+      "log": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/logs/element-19-rdmaNic.log",
+      "counts": {
+        "tests": 1,
+        "passed": 0,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 1
+      }
+    },
+    {
+      "name": "element-20-prospero",
+      "command": [
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/install/bin/sst-test-elements",
+        "-n",
+        "-p",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/src/sst-elements/src/sst/elements/prospero/tests/testsuite_default_prospero.py",
+        "-o",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/results/element-20-prospero",
+        "-r",
+        "1",
+        "-t",
+        "1",
+        "-e",
+        "test_prospero_text_withtimingdram_using_TAR_traces"
+      ],
+      "cwd": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel",
+      "exit_code": 0,
+      "status": "completed",
+      "elapsed_seconds": 2.68,
+      "log": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/logs/element-20-prospero.log",
+      "counts": {
+        "tests": 1,
+        "passed": 1,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "name": "element-21-ariel",
+      "command": [
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/install/bin/sst-test-elements",
+        "-n",
+        "-p",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/src/sst-elements/src/sst/elements/ariel/tests/testsuite_default_Ariel.py",
+        "-o",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/results/element-21-ariel",
+        "-r",
+        "1",
+        "-t",
+        "1",
+        "-e",
+        "test_Ariel_runstream_pin"
+      ],
+      "cwd": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel",
+      "exit_code": 0,
+      "status": "completed",
+      "elapsed_seconds": 0.14,
+      "log": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/logs/element-21-ariel.log",
+      "counts": {
+        "tests": 1,
+        "passed": 0,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 1
+      }
+    },
+    {
+      "name": "element-22-zodiac",
+      "command": [
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/install/bin/sst-test-elements",
+        "-n",
+        "-p",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/src/sst-elements/src/sst/elements/zodiac/test/testsuite_default_SiriusZodiacTrace.py",
+        "-o",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/results/element-22-zodiac",
+        "-r",
+        "1",
+        "-t",
+        "1",
+        "-e",
+        "test_Sirius_Zodiac_16"
+      ],
+      "cwd": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel",
+      "exit_code": 0,
+      "status": "completed",
+      "elapsed_seconds": 1.84,
+      "log": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/logs/element-22-zodiac.log",
+      "counts": {
+        "tests": 1,
+        "passed": 1,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "name": "golem-ideal",
+      "command": [
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/install/bin/sst-test-elements",
+        "-n",
+        "-p",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/src/sst-elements/src/sst/elements/golem/tests/testsuite_default_golem.py",
+        "-o",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/results/golem-ideal",
+        "-r",
+        "1",
+        "-t",
+        "1",
+        "-e",
+        "test_golem_short_tests_001_small_mvm_float_array_single_array_riscv64_",
+        "test_golem_short_tests_002_small_mvm_float_array_multi_array_riscv64_",
+        "test_golem_short_tests_003_small_mvm_int_array_single_array_riscv64_",
+        "test_golem_short_tests_004_small_mvm_int_array_multi_array_riscv64_"
+      ],
+      "cwd": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel",
+      "exit_code": 0,
+      "status": "completed",
+      "elapsed_seconds": 7.54,
+      "log": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/logs/golem-ideal.log",
+      "counts": {
+        "tests": 4,
+        "passed": 4,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "name": "merlin-threads",
+      "command": [
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/install/bin/sst-test-elements",
+        "-n",
+        "-p",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/src/sst-elements/src/sst/elements/merlin/tests/testsuite_default_merlin.py",
+        "-o",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/results/merlin-threads",
+        "-r",
+        "1",
+        "-t",
+        "2",
+        "-e",
+        "test_merlin_torus_5_trafficgen"
+      ],
+      "cwd": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel",
+      "exit_code": 0,
+      "status": "completed",
+      "elapsed_seconds": 1.48,
+      "log": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/logs/merlin-threads.log",
+      "counts": {
+        "tests": 1,
+        "passed": 1,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "name": "merlin-mpi",
+      "command": [
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/install/bin/sst-test-elements",
+        "-n",
+        "-p",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/src/sst-elements/src/sst/elements/merlin/tests/testsuite_default_merlin.py",
+        "-o",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/results/merlin-mpi",
+        "-r",
+        "2",
+        "-t",
+        "1",
+        "-e",
+        "test_merlin_torus_5_trafficgen"
+      ],
+      "cwd": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel",
+      "exit_code": 0,
+      "status": "completed",
+      "elapsed_seconds": 0.77,
+      "log": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/logs/merlin-mpi.log",
+      "counts": {
+        "tests": 1,
+        "passed": 1,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "name": "vanadis-hello-world",
+      "command": [
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/install/bin/sst-test-elements",
+        "-n",
+        "-p",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/src/sst-elements/src/sst/elements/vanadis/tests/testsuite_default_vanadis.py",
+        "-o",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/results/vanadis-hello-world",
+        "-r",
+        "1",
+        "-t",
+        "1",
+        "-e",
+        "test_vanadis_short_tests_003_small_basic_io_hello_world_riscv64_"
+      ],
+      "cwd": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel",
+      "exit_code": 0,
+      "status": "completed",
+      "elapsed_seconds": 0.63,
+      "log": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/logs/vanadis-hello-world.log",
+      "counts": {
+        "tests": 1,
+        "passed": 1,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "name": "nightly-targeted",
+      "command": [
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/install/bin/sst-test-elements",
+        "-n",
+        "-p",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/src/sst-elements/src/sst/elements/miranda/tests/testsuite_default_miranda.py",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/src/sst-elements/src/sst/elements/messier/tests/testsuite_default_Messier.py",
+        "-o",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/results/nightly-targeted",
+        "-e",
+        "test_miranda_randomgen",
+        "test_Messier_gupsgen",
+        "-m",
+        "nightly"
+      ],
+      "cwd": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel",
+      "exit_code": 0,
+      "status": "completed",
+      "elapsed_seconds": 40.94,
+      "log": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/logs/nightly-targeted.log",
+      "counts": {
+        "tests": 2,
+        "passed": 2,
+        "failed": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    }
+  ],
+  "direct": [
+    {
+      "element": "prospero",
+      "command": [
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/install/bin/sst",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/models/prospero.py"
+      ],
+      "cwd": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/models",
+      "exit_code": 0,
+      "behavioral_pass": true,
+      "elapsed_seconds": 0.77,
+      "stdout": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/logs/smoke-prospero.out",
+      "stderr": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/logs/smoke-prospero.err",
+      "stderr_nonempty": false
+    },
+    {
+      "element": "serrano",
+      "command": [
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/install/bin/sst",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/models/serrano.py"
+      ],
+      "cwd": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/models",
+      "exit_code": 0,
+      "behavioral_pass": true,
+      "elapsed_seconds": 0.55,
+      "stdout": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/logs/smoke-serrano.out",
+      "stderr": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/logs/smoke-serrano.err",
+      "stderr_nonempty": false
+    },
+    {
+      "element": "cramSim",
+      "command": [
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/install/bin/sst",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/models/cramsim.py",
+        "--model-options=--configfile=/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/src/sst-elements/src/sst/elements/cramSim/ddr4_verimem.cfg"
+      ],
+      "cwd": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/models",
+      "exit_code": 0,
+      "behavioral_pass": true,
+      "elapsed_seconds": 0.65,
+      "stdout": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/logs/smoke-cramSim.out",
+      "stderr": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/logs/smoke-cramSim.err",
+      "stderr_nonempty": false
+    },
+    {
+      "element": "carcosa",
+      "command": [
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/install/bin/sst",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/src/sst-elements/src/sst/elements/carcosa/tests/testmanagerLogic.py"
+      ],
+      "cwd": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/src/sst-elements/src/sst/elements/carcosa/tests",
+      "exit_code": 0,
+      "behavioral_pass": false,
+      "elapsed_seconds": 0.99,
+      "stdout": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/logs/smoke-carcosa.out",
+      "stderr": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/logs/smoke-carcosa.err",
+      "stderr_nonempty": false
+    },
+    {
+      "element": "ember-firefly",
+      "command": [
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/install/bin/sst",
+        "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/src/sst-elements/src/sst/elements/ember/test/emberLoad.py",
+        "--model-options=--topo=torus --shape=2 --cmdLine=\"Init\" --cmdLine=\"PingPong iterations=10 messageSize=64\" --cmdLine=\"Fini\""
+      ],
+      "cwd": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/src/sst-elements/src/sst/elements/ember/test",
+      "exit_code": 0,
+      "behavioral_pass": true,
+      "elapsed_seconds": 0.98,
+      "stdout": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/logs/smoke-ember-firefly.out",
+      "stderr": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/logs/smoke-ember-firefly.err",
+      "stderr_nonempty": false
+    }
+  ],
+  "environment": {
+    "CC": "/usr/bin/clang",
+    "CXX": "/usr/bin/clang++",
+    "MPICC": "/opt/homebrew/bin/mpicc",
+    "MPICXX": "/opt/homebrew/bin/mpicxx",
+    "SDKROOT": "/Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk",
+    "CXXFLAGS": "-O1 -g0",
+    "CFLAGS": "-O1 -g0"
+  },
+  "fixture_sha256": {
+    "Prospero-trace-files.tar.gz": "bcb193789d89b212d77ca95bbad5bf72592278efa68820b9c0c3431f17ba2be4",
+    "sst-Sirius-Allreduce-traces.tar.gz": "655b2cf5a2f93a7a9116a04c8c13c1d4d47630857ed49d4441641939bf10ce5a"
+  },
+  "gap_closure_2026_10_07": {
+    "date": "2026-10-07",
+    "install_changes": [
+      "core reconfigured --with-ncurses=/opt/homebrew/opt/ncurses and reinstalled",
+      "elements rebuilt with numpy/CrossSim visible to sst-config --PYTHON and reinstalled",
+      "iris sstmac provider patched in isolated copy (.runtime/gap-closure-2026-10-07/mv2/iris-sumi-provider.patch)",
+      "sst-hgcc 2a37f8c5 installed into the SST prefix with --with-std=17 plus wrapper additions",
+      "mvapich2 (mv2-test 0bd13efd) built with build_mac.sh"
+    ],
+    "closed": {
+      "sstinfo_interactive": "pass (native suite, TERM set)",
+      "rdmaNic_msg": "executes; functional output matches gold; statistics diff toolchain-specific",
+      "rdmaNic_IMB-MPI1": "pass (native suite, -m pr nightly, exact gold match)",
+      "llyr_simple_test": "pass (direct run, matches reference)",
+      "carcosa_configurations": "5 of 7 complete; 2 stuck-at abort on mask parser defect",
+      "golem_crosssim": "executes; app output matches gold; sst statistics golds environment-dependent",
+      "mv2_sendrecv": "pass with provider patch (4.85879 us)",
+      "mv2_collectives": "9 of 9 pass with provider patch (SUM=36 on reduce/allreduce)"
+    },
+    "not_closable_on_host": {
+      "ariel_pin": "Intel Pin has no Apple Silicon build",
+      "osseous": "requires Ariel/Pin",
+      "balar": "requires CUDA toolkit and GPGPU-Sim; nvcc absent on ARM64 macOS"
+    },
+    "evidence": ".runtime/gap-closure-2026-10-07/"
+  }
+}
