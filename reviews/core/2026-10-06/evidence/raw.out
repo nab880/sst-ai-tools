@@ -1,0 +1,4 @@
+WARNING: Building component "probe" with no links assigned.
+serializer bytes consumed=52 buffer=52
+RAW derived=1 expected=1
+Simulation is complete, simulated time: 5 ns

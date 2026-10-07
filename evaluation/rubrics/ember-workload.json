@@ -1,0 +1,16 @@
+{
+  "task": "ember-workload",
+  "criteria": [
+    "Existing motif with two ranks, ten round trips, 64-byte messages",
+    "Matching communication and natural completion verified",
+    "Reproducible model/command with correct component assembly",
+    "Modeled latency units and host runtime distinguished",
+    "No C++ changes"
+  ],
+  "verdicts": [
+    "pass",
+    "fail",
+    "blocked"
+  ],
+  "rule": "Pass only when all criteria have execution evidence. Missing runtime/artifacts is blocked, not pass. Evaluate behavior rather than an exact implementation."
+}

@@ -1,0 +1,4 @@
+WARNING: Building component "probe" with no links assigned.
+serializer bytes consumed=55 buffer=90
+UNIQUE_REQUEST extended=0 expected=1
+Simulation is complete, simulated time: 5 ns

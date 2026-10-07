@@ -1,0 +1,16 @@
+{
+  "task": "balar-vector",
+  "criteria": [
+    "Execution mode and relevant configuration explicit",
+    "Required external tools and workload artifacts checked",
+    "Reproducible run command for selected mode",
+    "Numerical vector output and completion verified for a pass",
+    "Missing prerequisites scored blocked, with no unrequested installation"
+  ],
+  "verdicts": [
+    "pass",
+    "fail",
+    "blocked"
+  ],
+  "rule": "Pass only when all criteria have execution evidence. Missing runtime/artifacts is blocked, not pass. Evaluate behavior rather than an exact implementation."
+}

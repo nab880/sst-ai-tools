@@ -1,0 +1,18 @@
+{
+  "task": "memory-extension",
+  "criteria": [
+    "Read timing 100ns and write timing 250ns measured from backend acceptance",
+    "Absent write_access_time preserves prior read/write timing",
+    "Every accepted request completes once with matching ID",
+    "Malformed, negative, or incompatible units rejected clearly",
+    "Controller/link overhead separated from backend latency in the oracle",
+    "Data behavior and checkpoint/restart preserved",
+    "Targeted executable checks and neighboring regression pass"
+  ],
+  "verdicts": [
+    "pass",
+    "fail",
+    "blocked"
+  ],
+  "rule": "Pass only when all criteria have evidence. Missing runtime validation is blocked, not pass. Evaluate behavior; do not require a particular implementation."
+}

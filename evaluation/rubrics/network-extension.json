@@ -1,0 +1,18 @@
+{
+  "task": "network-extension",
+  "criteria": [
+    "Absent parameter preserves identity mapping and baseline behavior",
+    "Permutation 2,0,3,1 maps timed and untimed unicast correctly",
+    "Endpoint discovery inverts the permutation",
+    "Untimed broadcast reaches each other endpoint once",
+    "Duplicate, wrong length, out-of-range, malformed values fail clearly",
+    "VN/VC behavior preserved and mapping serialized",
+    "Targeted executable checks and neighboring regression pass"
+  ],
+  "verdicts": [
+    "pass",
+    "fail",
+    "blocked"
+  ],
+  "rule": "Pass only when all criteria have evidence. Missing runtime validation is blocked, not pass. Evaluate behavior; do not require a particular implementation."
+}

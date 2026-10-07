@@ -1,0 +1,92 @@
+{
+  "tested_at": "2026-10-07T03:13:55.910266+00:00",
+  "revisions": {
+    "sst-core": "09bc3927b1fc23e65f3aa0795739cad36f315d5a",
+    "sst-elements": "47b99537882df309fa2bdb2eb60c9a1e16efb5e5"
+  },
+  "compiler": "Apple Clang 21, C++17, -O0 probe; existing -O1 runtime",
+  "sdk": "/Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk",
+  "mpi_environment": {
+    "OMPI_MCA_btl": "self,tcp",
+    "OMPI_MCA_btl_tcp_if_include": "lo0"
+  },
+  "runtime_prefix": "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/install",
+  "source_files": [
+    {
+      "repository": "sst-core",
+      "path": "src/sst/core/clock.cc",
+      "sha256": "4dd4d639b0892c7fcecd5e75197c4861ed20d5351cfe517422effa84afa89e36",
+      "matches_runtime_build_snapshot": true
+    },
+    {
+      "repository": "sst-core",
+      "path": "src/sst/core/params.cc",
+      "sha256": "693b79ba6a17d4a46df431b1ca134edcfbf407e98cc088467f8526b40d6af65e",
+      "matches_runtime_build_snapshot": true
+    },
+    {
+      "repository": "sst-core",
+      "path": "src/sst/core/model/configComponent.cc",
+      "sha256": "58bc93bd14ae489737da8a9af0cd6bbed51113de6850cc7beb4eadcd65c71ebe",
+      "matches_runtime_build_snapshot": true
+    },
+    {
+      "repository": "sst-core",
+      "path": "src/sst/core/rng/discrete.h",
+      "sha256": "acdd6a8b0105dcd8c850893b0213ecd8460501016993c7dda1931b32614f108c",
+      "matches_runtime_build_snapshot": true
+    },
+    {
+      "repository": "sst-core",
+      "path": "src/sst/core/interfaces/stdMem.h",
+      "sha256": "0774a9fdbd647d6ed9375f3c6a686fac54e9d998aac2100a41fd45f7712bc8c4",
+      "matches_runtime_build_snapshot": true
+    },
+    {
+      "repository": "sst-core",
+      "path": "src/sst/core/statapi/stataccumulator.h",
+      "sha256": "bc5c8537334dbb50c161f79a8fdd66910ba2cff7cdbd6733d0bfe24ee011103c",
+      "matches_runtime_build_snapshot": true
+    },
+    {
+      "repository": "sst-core",
+      "path": "src/sst/core/statapi/stathistogram.h",
+      "sha256": "556863c674fae372e975d001d313c0b16cfc605afd1ebd214071ccdf0980bca7",
+      "matches_runtime_build_snapshot": true
+    },
+    {
+      "repository": "sst-core",
+      "path": "src/sst/core/serialization/impl/serialize_unique_ptr.h",
+      "sha256": "d34b926951cf0c3f462f26e99a32b857676a7859e912b9c0dd8506529da5b504",
+      "matches_runtime_build_snapshot": true
+    },
+    {
+      "repository": "sst-elements",
+      "path": "src/sst/elements/merlin/interfaces/ExtendedRequest.h",
+      "sha256": "66936768988a8661d20c09b5c1bd6ac86a0a7f8e68c289ec08ac7d4b37af5add",
+      "matches_runtime_build_snapshot": true
+    },
+    {
+      "repository": "sst-elements",
+      "path": "src/sst/elements/merlin/trafficgen/trafficgen.cc",
+      "sha256": "d0b2d8edf1317317afc7a868f4da10403b8a5d61e69141e3914b8ae09ae6fff6",
+      "matches_runtime_build_snapshot": true
+    },
+    {
+      "repository": "sst-elements",
+      "path": "src/sst/elements/simpleElementExample/basicStatistics.cc",
+      "sha256": "3135d8af902b16fe7aca1134ee89f8d6cff07cdb996c2a88be081e8d1627ec75",
+      "matches_runtime_build_snapshot": true
+    }
+  ],
+  "probe_adaptations": [
+    "Extracted the retained probes; Python files were formatted without changing behavior.",
+    "Capture helper ELI namespace changed from merlin.auditCapture to audit.Capture to load the actual installed Merlin library without shadowing it.",
+    "Added current elements source include path because ExtendedRequest.h is not exported by this installation."
+  ],
+  "report_scope": "Reproduction/reassessment; no fixes or production SST source changes.",
+  "runtime_binary_sha256": {
+    "bin/sst": "8a84fc53c12d76bd7396a4e906f37f401b9d0f4b5a1c8793d8169dc692f40443",
+    "libexec/sstsim.x": "55ad84a9ddddd8fe666a86e147707f7ed5a093e48a929a98b13da1df0ecef8e0"
+  }
+}

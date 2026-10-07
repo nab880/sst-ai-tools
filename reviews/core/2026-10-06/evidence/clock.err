@@ -1,0 +1,12 @@
+[8753-nbutche1:52776] *** Process received signal ***
+[8753-nbutche1:52776] Signal: Segmentation fault: 11 (11)
+[8753-nbutche1:52776] Signal code: Invalid permissions (2)
+[8753-nbutche1:52776] Failing at address: 0x99112
+[8753-nbutche1:52776] [ 0] 0   libsystem_platform.dylib            0x000000018dae1744 _sigtramp + 56
+[8753-nbutche1:52776] [ 1] 0   sstsim.x                            0x0000000100d007c8 _ZN3SST5Clock7executeEv + 232
+[8753-nbutche1:52776] [ 2] 0   sstsim.x                            0x0000000100f0e3d8 _ZN3SST10Simulation3runEv.cold.1 + 80
+[8753-nbutche1:52776] [ 3] 0   sstsim.x                            0x0000000100d7ec80 _ZN3SST10Simulation3runEv + 68
+[8753-nbutche1:52776] [ 4] 0   sstsim.x                            0x0000000100cda198 _ZL16start_simulationjR15SimThreadInfo_tRN3SST4Core10ThreadSafe7BarrierEyi + 6036
+[8753-nbutche1:52776] [ 5] 0   sstsim.x                            0x0000000100cd43c8 main + 14792
+[8753-nbutche1:52776] [ 6] 0   dyld                                0x000000018d70c4e4 start + 6992
+[8753-nbutche1:52776] *** End of error message ***

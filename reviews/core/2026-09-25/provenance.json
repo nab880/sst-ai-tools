@@ -1,0 +1,23 @@
+{
+  "review_date": "2026-09-25",
+  "reviewed_revisions": {
+    "sst-core": "f54d79af27c8756b50dbb9e8eb356eb5dcbee4d9",
+    "sst-elements": "9a3de5e2e9ea343b49bb09ffc18bccc2b61c5ba1"
+  },
+  "imported_at": "2026-10-07T03:04:45.623465+00:00",
+  "transform": "Only Markdown source-link destinations were rewritten to commit-pinned GitHub links; report prose and retained code were preserved.",
+  "original_files": [
+    {
+      "original_workspace_path": "sst-core/SST_CORE_CORRECTNESS_REVIEW.md",
+      "original_sha256": "cc113295e41388be4e52b98a28def0d083d60e7fc323c4367238fe8caeb197d8",
+      "archived_file": "SST_CORE_CORRECTNESS_REVIEW.md",
+      "archived_sha256": "e482ee14895d5f159c9630313247423b0ced7f256ff6833d3e978e7b8b4ec912"
+    },
+    {
+      "original_workspace_path": "sst-core/SST_CORE_ELEMENTS_IMPACT.md",
+      "original_sha256": "4d4536ab272f954e3cd10326d4cedb5ea35e0829f46bcb604de12ea8d4677978",
+      "archived_file": "SST_CORE_ELEMENTS_IMPACT.md",
+      "archived_sha256": "efd430932ca136262dc99fa295e85e2d55bd81160a004d74c7024bd92348cf8a"
+    }
+  ]
+}

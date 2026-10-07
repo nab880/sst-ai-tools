@@ -1,0 +1,231 @@
+{
+  "revisions": {
+    "sst-core": "09bc3927b1fc23e65f3aa0795739cad36f315d5a",
+    "sst-elements": "47b99537882df309fa2bdb2eb60c9a1e16efb5e5"
+  },
+  "findings": {
+    "F01": {
+      "status": "reproduced",
+      "observed": {
+        "promised_cycle": 2,
+        "observed_cycle": 1,
+        "growth_exit_code": -11
+      },
+      "expected": {
+        "reactivated_cycle": 2,
+        "growth_crash": false
+      },
+      "runs": [
+        "clock_one",
+        "clock"
+      ]
+    },
+    "F02": {
+      "status": "reproduced",
+      "observed": {
+        "direct": "2GHz",
+        "scoped": "1GHz"
+      },
+      "expected": {
+        "direct": "2GHz",
+        "scoped": "2GHz"
+      },
+      "runs": [
+        "basic"
+      ]
+    },
+    "F03": {
+      "status": "reproduced",
+      "observed": {
+        "draws_and_indices": [
+          [
+            0.1,
+            1
+          ],
+          [
+            0.5,
+            2
+          ],
+          [
+            0.99,
+            2
+          ]
+        ],
+        "hotspot_destinations": [
+          4,
+          4,
+          4
+        ]
+      },
+      "expected": {
+        "indices": [
+          0,
+          1,
+          1
+        ],
+        "hotspot_destinations": [
+          3,
+          3,
+          3
+        ]
+      },
+      "runs": [
+        "basic",
+        "hotspot"
+      ]
+    },
+    "F04": {
+      "status": "reproduced",
+      "observed": {
+        "raw": {
+          "consumed": 52,
+          "buffer": 52,
+          "dynamic_type_preserved": true
+        },
+        "unique": {
+          "consumed": 40,
+          "buffer": 44,
+          "dynamic_type_preserved": false
+        },
+        "raw_request": {
+          "consumed": 98,
+          "buffer": 98,
+          "dynamic_type_preserved": true
+        },
+        "unique_request": {
+          "consumed": 55,
+          "buffer": 90,
+          "dynamic_type_preserved": false
+        }
+      },
+      "expected": {
+        "dynamic_type_preserved": true,
+        "complete_stream_consumption": true
+      },
+      "runs": [
+        "raw",
+        "unique",
+        "raw_request",
+        "unique_request"
+      ]
+    },
+    "F05": {
+      "status": "reproduced",
+      "observed": {
+        "request_vaddr": 0,
+        "response_vaddr": 0
+      },
+      "expected": {
+        "request_vaddr": 32768,
+        "response_vaddr": 32768
+      },
+      "runs": [
+        "basic"
+      ]
+    },
+    "F06": {
+      "status": "reproduced",
+      "observed": {
+        "once": {
+          "rate": "10ns"
+        },
+        "twice": {
+          "rate": "10ns"
+        }
+      },
+      "expected": {
+        "twice_contains": {
+          "rate": "10ns",
+          "type": "sst.HistogramStatistic",
+          "binwidth": 2
+        }
+      },
+      "runs": [
+        "substats_once",
+        "substats_twice"
+      ]
+    },
+    "F07": {
+      "status": "reproduced",
+      "observed": {
+        "NumItemsCollected": 100,
+        "NumItemsBinned": 1,
+        "bin_population": 100
+      },
+      "expected": {
+        "NumItemsCollected": 100,
+        "NumItemsBinned": 100,
+        "bin_population": 100
+      },
+      "runs": [
+        "basic"
+      ]
+    },
+    "F08": {
+      "status": "reproduced",
+      "observed": {
+        "collected": 2,
+        "binned": 2,
+        "displayed_bins": [
+          0,
+          0
+        ]
+      },
+      "expected": {
+        "collected": 2,
+        "binned": 2,
+        "displayed_bins": [
+          2,
+          0
+        ]
+      },
+      "runs": [
+        "basic",
+        "element_stats_integer"
+      ]
+    },
+    "F09": {
+      "status": "reproduced",
+      "observed": {
+        "collected": 1,
+        "binned": 0,
+        "above_max": 1
+      },
+      "expected": {
+        "collected": 1,
+        "binned": 1,
+        "above_max": 0
+      },
+      "runs": [
+        "basic",
+        "element_stats_floating"
+      ]
+    },
+    "F10": {
+      "status": "reproduced",
+      "observed": {
+        "maximum": 2.2250738585072014e-308
+      },
+      "expected": {
+        "maximum": -1
+      },
+      "runs": [
+        "basic"
+      ]
+    },
+    "F11": {
+      "status": "reproduced",
+      "observed": {
+        "variance": 4.0
+      },
+      "expected": {
+        "population_variance": 1,
+        "sample_variance": 2
+      },
+      "runs": [
+        "basic"
+      ]
+    }
+  },
+  "raw_controls_passed": true
+}

@@ -1,0 +1,20 @@
+{
+  "command": [
+    "/usr/bin/clang++",
+    "-std=c++17",
+    "-g",
+    "-O0",
+    "-Wall",
+    "-Wextra",
+    "-shared",
+    "-undefined",
+    "dynamic_lookup",
+    "-I/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/install/include",
+    "-I/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/devel/install/include/sst/elements",
+    "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/reviews/core/2026-10-06/probes/audit.cc",
+    "-o",
+    "/Users/nbutche/Documents/GitHub/inc-testing/sst-ai-tools/.runtime/reassessment-2026-10-06/libaudit.so"
+  ],
+  "exit_code": 1,
+  "SDKROOT": "/Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk"
+}

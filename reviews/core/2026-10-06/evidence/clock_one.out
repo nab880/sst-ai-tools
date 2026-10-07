@@ -1,0 +1,6 @@
+WARNING: Building component "probe" with no links assigned.
+CLOCK main cycle=1
+CLOCK promised=2
+CLOCK other cycle=1
+CLOCK main cycle=2
+Simulation is complete, simulated time: 2 ns

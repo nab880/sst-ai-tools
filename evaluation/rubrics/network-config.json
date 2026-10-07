@@ -1,0 +1,16 @@
+{
+  "task": "network-config",
+  "criteria": [
+    "Five endpoints, ring connectivity, documented link/flit/latency settings",
+    "Exactly ten 64-byte packets per endpoint to its next neighbor; no substituted random workload",
+    "Fifty arrivals, intended destinations, and no duplicates verified by an executable oracle",
+    "Natural finite-workload termination and zero C++ changes",
+    "Command reproducible against the run installation"
+  ],
+  "verdicts": [
+    "pass",
+    "fail",
+    "blocked"
+  ],
+  "rule": "Pass only when all criteria have execution evidence. Missing prerequisites or a source capability gap demonstrated under the task constraints is blocked, not pass. An unsupported substitution is fail. Evaluate behavior rather than an exact implementation."
+}
