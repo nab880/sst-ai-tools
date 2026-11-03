@@ -16,14 +16,14 @@
   },
   "sources": [
     {
-      "resource": "https://github.com/an unlisted GitLab repository/blob/0bd13efd074affc7c8e3cca5add42af699362748/build_linux.sh",
+      "resource": "unlisted GitLab repository (adapted MVAPICH2 checkout), commit 0bd13efd074affc7c8e3cca5add42af699362748, build_linux.sh",
       "x-commit": "0bd13efd074affc7c8e3cca5add42af699362748",
       "x-sha256": "dc864c71a1d47af1926daa84ba215b4936be3cb590f18aeb14ed129f0e79fdb5",
       "x-review-scope": "External checkout inspected locally; automatic freshness checking unavailable",
       "id": "s0"
     },
     {
-      "resource": "https://github.com/an unlisted GitLab repository/blob/0bd13efd074affc7c8e3cca5add42af699362748/build_mac.sh",
+      "resource": "unlisted GitLab repository (adapted MVAPICH2 checkout), commit 0bd13efd074affc7c8e3cca5add42af699362748, build_mac.sh",
       "x-commit": "0bd13efd074affc7c8e3cca5add42af699362748",
       "x-sha256": "c7960921198f7bccf9a6a8c6ddd00c1039f5240abd7e067d5a79ee26e44fbc6a",
       "x-review-scope": "External checkout inspected locally; automatic freshness checking unavailable",

@@ -15,21 +15,21 @@
   },
   "sources": [
     {
-      "resource": "https://github.com/an unlisted GitLab repository/blob/0bd13efd074affc7c8e3cca5add42af699362748/build_linux.sh",
+      "resource": "unlisted GitLab repository (adapted MVAPICH2 checkout), commit 0bd13efd074affc7c8e3cca5add42af699362748, build_linux.sh",
       "x-commit": "0bd13efd074affc7c8e3cca5add42af699362748",
       "x-sha256": "dc864c71a1d47af1926daa84ba215b4936be3cb590f18aeb14ed129f0e79fdb5",
       "x-review-scope": "External source inspected locally; freshness review is manual",
       "id": "s0"
     },
     {
-      "resource": "https://github.com/an unlisted GitLab repository/blob/0bd13efd074affc7c8e3cca5add42af699362748/build_mac.sh",
+      "resource": "unlisted GitLab repository (adapted MVAPICH2 checkout), commit 0bd13efd074affc7c8e3cca5add42af699362748, build_mac.sh",
       "x-commit": "0bd13efd074affc7c8e3cca5add42af699362748",
       "x-sha256": "c7960921198f7bccf9a6a8c6ddd00c1039f5240abd7e067d5a79ee26e44fbc6a",
       "x-review-scope": "External source inspected locally; freshness review is manual",
       "id": "s1"
     },
     {
-      "resource": "https://github.com/an unlisted GitLab repository/blob/0bd13efd074affc7c8e3cca5add42af699362748/build_all_mac.sh",
+      "resource": "unlisted GitLab repository (adapted MVAPICH2 checkout), commit 0bd13efd074affc7c8e3cca5add42af699362748, build_all_mac.sh",
       "x-commit": "0bd13efd074affc7c8e3cca5add42af699362748",
       "x-sha256": "4fe9b36caa9c9504724f1db1515ff780c13c7ab3a10b57b46de961cf4474aff1",
       "x-review-scope": "External source inspected locally; freshness review is manual",
@@ -57,7 +57,7 @@
       "id": "s5"
     },
     {
-      "resource": "https://github.com/an unlisted GitLab repository/blob/0bd13efd074affc7c8e3cca5add42af699362748/build_all_linux.sh",
+      "resource": "unlisted GitLab repository (adapted MVAPICH2 checkout), commit 0bd13efd074affc7c8e3cca5add42af699362748, build_all_linux.sh",
       "x-commit": "0bd13efd074affc7c8e3cca5add42af699362748",
       "x-sha256": "4c9f0e73efbac4b3d921afdf1754e9a407e0f7d1b89b9986ed52b07d96a521e7",
       "x-review-scope": "External source inspected locally; freshness review is manual",

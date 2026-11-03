@@ -16,35 +16,35 @@
   },
   "sources": [
     {
-      "resource": "https://github.com/an unlisted GitLab repository/blob/0bd13efd074affc7c8e3cca5add42af699362748/configure.ac",
+      "resource": "unlisted GitLab repository (adapted MVAPICH2 checkout), commit 0bd13efd074affc7c8e3cca5add42af699362748, configure.ac",
       "x-commit": "0bd13efd074affc7c8e3cca5add42af699362748",
       "x-sha256": "5d4d7548e4ad9b9562b04777af2cdf0a3f9de2c3e7c4b69ae54255ac9353cf00",
       "x-review-scope": "External checkout inspected locally; automatic freshness checking unavailable",
       "id": "s0"
     },
     {
-      "resource": "https://github.com/an unlisted GitLab repository/blob/0bd13efd074affc7c8e3cca5add42af699362748/src/mpi/timer/wtime.c",
+      "resource": "unlisted GitLab repository (adapted MVAPICH2 checkout), commit 0bd13efd074affc7c8e3cca5add42af699362748, src/mpi/timer/wtime.c",
       "x-commit": "0bd13efd074affc7c8e3cca5add42af699362748",
       "x-sha256": "70c059bebe542b1fd87fa97d2237a05ac77effa5a8553bf2a72ee30c5b08f6dd",
       "x-review-scope": "External checkout inspected locally; automatic freshness checking unavailable",
       "id": "s1"
     },
     {
-      "resource": "https://github.com/an unlisted GitLab repository/blob/0bd13efd074affc7c8e3cca5add42af699362748/src/util/timers/mpiu_timer.c",
+      "resource": "unlisted GitLab repository (adapted MVAPICH2 checkout), commit 0bd13efd074affc7c8e3cca5add42af699362748, src/util/timers/mpiu_timer.c",
       "x-commit": "0bd13efd074affc7c8e3cca5add42af699362748",
       "x-sha256": "b347166c78a08baa93148dbaf3d4ed2ace38ba60e8aa6b990bf6e51df60f39cb",
       "x-review-scope": "External checkout inspected locally; automatic freshness checking unavailable",
       "id": "s2"
     },
     {
-      "resource": "https://github.com/an unlisted GitLab repository/blob/0bd13efd074affc7c8e3cca5add42af699362748/build_linux.sh",
+      "resource": "unlisted GitLab repository (adapted MVAPICH2 checkout), commit 0bd13efd074affc7c8e3cca5add42af699362748, build_linux.sh",
       "x-commit": "0bd13efd074affc7c8e3cca5add42af699362748",
       "x-sha256": "dc864c71a1d47af1926daa84ba215b4936be3cb590f18aeb14ed129f0e79fdb5",
       "x-review-scope": "External checkout inspected locally; automatic freshness checking unavailable",
       "id": "s3"
     },
     {
-      "resource": "https://github.com/an unlisted GitLab repository/blob/0bd13efd074affc7c8e3cca5add42af699362748/build_mac.sh",
+      "resource": "unlisted GitLab repository (adapted MVAPICH2 checkout), commit 0bd13efd074affc7c8e3cca5add42af699362748, build_mac.sh",
       "x-commit": "0bd13efd074affc7c8e3cca5add42af699362748",
       "x-sha256": "c7960921198f7bccf9a6a8c6ddd00c1039f5240abd7e067d5a79ee26e44fbc6a",
       "x-review-scope": "External checkout inspected locally; automatic freshness checking unavailable",
@@ -207,21 +207,21 @@
     },
     {
       "id": "s25",
-      "resource": "https://github.com/an unlisted GitLab repository/blob/0bd13efd074affc7c8e3cca5add42af699362748/src/mpid/ch3/channels/nemesis/netmod/ofi/ofi_progress.c",
+      "resource": "unlisted GitLab repository (adapted MVAPICH2 checkout), commit 0bd13efd074affc7c8e3cca5add42af699362748, src/mpid/ch3/channels/nemesis/netmod/ofi/ofi_progress.c",
       "x-commit": "0bd13efd074affc7c8e3cca5add42af699362748",
       "x-sha256": "4415a50a50f7e3b5f3cccb1a3f94905817e96a53efa2723bffe0341d741aba25",
       "x-review-scope": "External source inspected locally; freshness review is manual"
     },
     {
       "id": "s26",
-      "resource": "https://github.com/an unlisted GitLab repository/blob/0bd13efd074affc7c8e3cca5add42af699362748/src/mpid/ch3/channels/nemesis/netmod/ofi/ofi_init.c",
+      "resource": "unlisted GitLab repository (adapted MVAPICH2 checkout), commit 0bd13efd074affc7c8e3cca5add42af699362748, src/mpid/ch3/channels/nemesis/netmod/ofi/ofi_init.c",
       "x-commit": "0bd13efd074affc7c8e3cca5add42af699362748",
       "x-sha256": "2ba7a5914f558c50f6fc37fb2554e603fa7f321e0188926eb8d90838812eb113",
       "x-review-scope": "External source inspected locally; freshness review is manual"
     },
     {
       "id": "s27",
-      "resource": "https://github.com/an unlisted GitLab repository/blob/0bd13efd074affc7c8e3cca5add42af699362748/src/mpid/ch3/channels/nemesis/netmod/ofi/ofi_tagged_template.c",
+      "resource": "unlisted GitLab repository (adapted MVAPICH2 checkout), commit 0bd13efd074affc7c8e3cca5add42af699362748, src/mpid/ch3/channels/nemesis/netmod/ofi/ofi_tagged_template.c",
       "x-commit": "0bd13efd074affc7c8e3cca5add42af699362748",
       "x-sha256": "f9eddfa049f09cfeb81105355de6f51badcb00ce1b5e644b0bd09a1db7037887",
       "x-review-scope": "External source inspected locally; freshness review is manual"
