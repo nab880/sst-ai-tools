@@ -18,50 +18,50 @@
   "sources": [
     {
       "id": "s0",
-      "resource": "https://github.com/sstsimulator/sst-elements/blob/da6456ef319bc45c7e7a6c66965546fda0a4b82c/src/sst/elements/mercury/common/skeleton.h",
+      "resource": "https://github.com/sstsimulator/sst-elements/blob/4944e4c43421da55bc242d46b13e5850a6016304/src/sst/elements/mercury/common/skeleton.h",
       "x-repository": "sst-elements",
       "x-path": "src/sst/elements/mercury/common/skeleton.h",
-      "x-commit": "da6456ef319bc45c7e7a6c66965546fda0a4b82c",
+      "x-commit": "4944e4c43421da55bc242d46b13e5850a6016304",
       "x-sha256": "733d75ae12e2959c6233dcb9dcefba488fcd6de34343b2745bbeaf06b9c38f5e"
     },
     {
       "id": "s1",
-      "resource": "https://github.com/sstsimulator/sst-elements/blob/da6456ef319bc45c7e7a6c66965546fda0a4b82c/src/sst/elements/mercury/common/skeleton.cc",
+      "resource": "https://github.com/sstsimulator/sst-elements/blob/4944e4c43421da55bc242d46b13e5850a6016304/src/sst/elements/mercury/common/skeleton.cc",
       "x-repository": "sst-elements",
       "x-path": "src/sst/elements/mercury/common/skeleton.cc",
-      "x-commit": "da6456ef319bc45c7e7a6c66965546fda0a4b82c",
-      "x-sha256": "fb92e395b78b6038890245caa2d36699b4f6210f3574d5dbf908deb2c77ced34"
+      "x-commit": "4944e4c43421da55bc242d46b13e5850a6016304",
+      "x-sha256": "d5f884214bab26262e0a8dabc8666ba15176ac6eb4df5b9696d569965ce1e3cb"
     },
     {
       "id": "s2",
-      "resource": "https://github.com/sstsimulator/sst-elements/blob/da6456ef319bc45c7e7a6c66965546fda0a4b82c/src/sst/elements/mercury/libraries/compute/memory_model.cc",
+      "resource": "https://github.com/sstsimulator/sst-elements/blob/4944e4c43421da55bc242d46b13e5850a6016304/src/sst/elements/mercury/libraries/compute/memory_model.cc",
       "x-repository": "sst-elements",
       "x-path": "src/sst/elements/mercury/libraries/compute/memory_model.cc",
-      "x-commit": "da6456ef319bc45c7e7a6c66965546fda0a4b82c",
-      "x-sha256": "dfbed374c87f7fb5dc70f08d34af1c79c8c7691a24434f0131b4148bc89ae8ac"
+      "x-commit": "4944e4c43421da55bc242d46b13e5850a6016304",
+      "x-sha256": "83be8152b1edad20e9901da5c6ff7114323c8b6193c714f08d5b022126b62b04"
     },
     {
       "id": "s3",
-      "resource": "https://github.com/sstsimulator/sst-elements/blob/da6456ef319bc45c7e7a6c66965546fda0a4b82c/src/sst/elements/mercury/libraries/compute/instruction_processor.cc",
+      "resource": "https://github.com/sstsimulator/sst-elements/blob/4944e4c43421da55bc242d46b13e5850a6016304/src/sst/elements/mercury/libraries/compute/instruction_processor.cc",
       "x-repository": "sst-elements",
       "x-path": "src/sst/elements/mercury/libraries/compute/instruction_processor.cc",
-      "x-commit": "da6456ef319bc45c7e7a6c66965546fda0a4b82c",
+      "x-commit": "4944e4c43421da55bc242d46b13e5850a6016304",
       "x-sha256": "e6b35584ad3b08bdbe6b4a99780824575b7a2c439c5a8016d278085c8d422d36"
     },
     {
       "id": "s4",
-      "resource": "https://github.com/sstsimulator/sst-elements/blob/da6456ef319bc45c7e7a6c66965546fda0a4b82c/src/sst/elements/mercury/operating_system/process/app.cc",
+      "resource": "https://github.com/sstsimulator/sst-elements/blob/4944e4c43421da55bc242d46b13e5850a6016304/src/sst/elements/mercury/operating_system/process/app.cc",
       "x-repository": "sst-elements",
       "x-path": "src/sst/elements/mercury/operating_system/process/app.cc",
-      "x-commit": "da6456ef319bc45c7e7a6c66965546fda0a4b82c",
+      "x-commit": "4944e4c43421da55bc242d46b13e5850a6016304",
       "x-sha256": "0f7b51e1ec5cd87d2ebd7abc58494ee55935e4c31aa20b9727abbc9fe77d41e0"
     },
     {
       "id": "s5",
-      "resource": "https://github.com/sstsimulator/sst-elements/blob/da6456ef319bc45c7e7a6c66965546fda0a4b82c/src/sst/elements/merlin/interfaces/linkControl.cc",
+      "resource": "https://github.com/sstsimulator/sst-elements/blob/4944e4c43421da55bc242d46b13e5850a6016304/src/sst/elements/merlin/interfaces/linkControl.cc",
       "x-repository": "sst-elements",
       "x-path": "src/sst/elements/merlin/interfaces/linkControl.cc",
-      "x-commit": "da6456ef319bc45c7e7a6c66965546fda0a4b82c",
+      "x-commit": "4944e4c43421da55bc242d46b13e5850a6016304",
       "x-sha256": "d61c8793dd5133afa155d7b84f49e02d1be71f1f9d18a29850cac2b5de4600ce"
     },
     {
@@ -166,24 +166,27 @@ chunks is 200,000 requests per rank per iteration, so compute-heavy skeletons
 reach 4-6 GB within seconds in any network mode, and six parallel simulators
 exhausted a 17 GB workstation twice.
 
-Mitigations used, in order of fidelity:
+The leak was not located (a counter in `HgBase::handleExecutionEvent`, the
+only place that executes and deletes these events, stayed at zero while the
+simulation completed, so some other delivery path executes them without
+freeing them; macOS refused heap inspection of the process). The local
+`sccg-ml` branch instead adds a node parameter `memory_flow_closed_form`:
+`MemoryModel::accessFlowClosedForm` replays the same per-chunk channel
+bookkeeping synchronously and schedules a single completion callback.
+Simulated times match the event model exactly (1.08638 ms and 12.999 ms on
+two fixtures), and the worst case measured (16 ranks, 47 M-element region,
+8 iterations, 10 steps) fell from 4.6 GB to 93 MB.
 
-1. Keep modeled compute regions proportional to the message size (a 64-row
-   slab per rank rather than an N x N tile) unless the volume term is the
-   point of the experiment.
-2. Raise `node.flow_mtu`. Timing is unchanged when a region fits in one chunk
-   and within 0.1% for very large regions, but mid-size regions lose channel
-   pipelining: a 786 KB region took 1.14 ms at 64 KB chunks and 1.79 ms at
-   4 MB. 64 KB is a reasonable default; do not go to multi-megabyte chunks
-   for small-compute studies.
-3. Cap and watch the host: nice the `sst` processes, poll RSS and kill above a
-   budget, and start new runs only when the machine has headroom
-   (`hg-netgnn/hgnet/run.py`). Never run more parallel simulators than the
-   RAM divided by the largest expected RSS.
+Two further points apply with or without the fix:
 
-The leak itself (events sent through `HgBase::sendExecutionEvent` on the
-component self link, whose handler does call `delete`) was not resolved; see
-the sibling workspace's `SCCG-PLAN.md` for the probe and current status.
+1. `flow_mtu` itself changes modeled time for regions larger than one chunk
+   (a 786 KB region took 1.14 ms at 64 KB chunks and 1.79 ms at 4 MB because
+   large chunks defeat the channel pipelining), so keep it near the shipped
+   value (512 to 4096 B) and hold it fixed across a dataset.
+2. Keep modeled compute regions proportional to what the study needs (a slab
+   per rank rather than an N x N tile unless the volume term is the point),
+   nice the `sst` processes, poll their RSS, and never run more simulators in
+   parallel than the host's RAM divided by the largest expected RSS.
 
 ## Validate
 
