@@ -18,6 +18,7 @@ The [element selector](ofk/elements/index.md) documents the main use cases of **
 | Refresh source-dependent knowledge | [sst-refresh-knowledge](skills/sst-refresh-knowledge/SKILL.md) | “Review the guides whose referenced source changed.” |
 | Create an Ember communication motif | [create-ember-motif](skills/create-ember-motif/SKILL.md) | “Add a motif where every rank sends to its two neighbors, then reduces.” |
 | Create a Mercury skeleton application | [create-mercury-skeleton](skills/create-mercury-skeleton/SKILL.md) | “Write a two-rank MPI skeleton that exchanges 1 KiB messages and runs on Mercury.” |
+| Predict fabric congestion from source | [predict-fabric-from-source](skills/predict-fabric-from-source/SKILL.md) | “Instrument these MPI skeletons, run them on an ideal and a real Merlin fabric, and build the training set.” |
 
 The network/CPU skills ask about missing modeling priorities and constraints before consequential choices. They reuse answers, select workload and hardware layers separately, and continue through implementation and validation. See [common model combinations](USE_CASES.md) and [the knowledge index](ofk/index.md).
 
@@ -26,7 +27,7 @@ The network/CPU skills ask about missing modeling priorities and constraints bef
 ```text
 sst-ai-tools/
   ofk/          OKF knowledge bundle and progressively loaded indexes
-  skills/       Ten task workflows
+  skills/       Eleven task workflows
   tools/        Inspection, catalog, test planning, validation, evaluation
   tests/        Tool behavior tests
   evaluation/   Agent prompts and evaluator-only rubrics

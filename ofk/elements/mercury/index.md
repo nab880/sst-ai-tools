@@ -7,6 +7,7 @@
 
 - [SST-HGCC and MV2 application paths](hgcc-mv2.md) — Compile applications for Mercury and select modeled versus implementation-level MPI behavior.
 - [Write and run a Mercury skeleton application](skeleton-apps.md) — Build a skeleton in tree or with SST-HGCC, drive it from Python, and validate it.
+- [Static communication graphs and epoch telemetry](sccg-telemetry.md) — Emit an SCCG with `hg++ --emit-sccg`, record per-epoch simulated time in Mercury, and run paired Merlin experiments within host memory.
 
 - [HGCC installation](../../development/hgcc-install.md) — Application-toolchain prerequisites and build procedure.
 - [MV2 installation](../../development/mv2-install.md) — Adapted MPI build/link/runtime prerequisites.
